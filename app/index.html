@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Reserva d'Hotel</title>
+</head>
+<body>
+  <h2>Formulario de Reserva d'Hotel</h2>
+  <form action="codi.php" method="post">
+    <label for="roomType">Tipus d'habitació:</label>
+    <select name="roomType" id="roomType" required>
+      <option value="basic">Bàsica</option>
+      <option value="superior">Superior</option>
+    </select>
+    <br>
+    <br>
+    <label for="numRooms">Quantitat d'habitacions:</label>
+    <input type="number" name="numRooms" id="numRooms" min="1" required>
+    <br>
+    <br>
+    <label for="numPeople">Quantitat de persones:</label>
+    <input type="number" name="numPeople" id="numPeople" min="1" required>
+    <br>
+    <br>
+    <label for="numDoubleBeds">Quantitat de llits dobles:</label>
+    <input type="number" name="numDoubleBeds" id="numDoubleBeds" min="0" required>
+    <br>
+    <br>
+    <label for="numSingleBeds">Quantitat de llits individuals:</label>
+    <input type="number" name="numSingleBeds" id="numSingleBeds" min="0" required>
+    <br>
+    <br>
+    <label for="numNights">Quantitat de nits:</label>
+    <input type="number" name="numNights" id="numNights" min="1" required>
+    <br>
+    <br>
+    <label for="name">Nom i cognoms:</label>
+    <input type="text" name="name" id="name" required>
+    <br>
+    <br>
+    <label for="creditCard">Número de VISA:</label>
+    <input type="text" name="creditCard" id="creditCard" required>
+    <br>
+    <br>
+    <button type="submit">Calcular Preu Total</button>
+  </form>
+</body>
+</html>

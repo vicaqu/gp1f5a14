@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  reserva:
+    image: hotel:1.0
+    expose:
+      - "80"
+    environment:
+      - HOST_NAME=gp1f5a14.fjeclot.net
+
+  lb:
+     image: nginx:latest
+     volumes:
+       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+     depends_on:
+       - reserva
+     ports:
+       - "8000:8000"
