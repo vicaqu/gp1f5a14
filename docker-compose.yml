@@ -2,7 +2,9 @@ version: '3'
 
 services:
   reserva:
-    image: group072324/hotel:1.0
+    build: .
+    volumes:
+      - ./app:/var/www/html
     expose:
       - "80"
     environment:
